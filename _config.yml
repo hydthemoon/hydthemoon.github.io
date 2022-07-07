@@ -110,7 +110,7 @@ author:
   location         : "Seoul, South Korea"
   email            :
   links:
-    - label: "E-mail"
+    - label: "e-mail"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:hydthemoon@gmail.com"
     - label: "naver blog"
@@ -276,7 +276,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
 # _pages                      : 해당 하단 영역이 새로 추가되었습니다.
