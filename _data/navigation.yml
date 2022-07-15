@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "About"
-    url: https://www.linkedin.com/in/kim-jaehyun-511177132/
   - title: "Categories"
     url: /categories/
+  - title: "Tags"
+    url: /tags/
   - title: "Posts"
     url: /year-archive/
   # - title: "Sitemap"
