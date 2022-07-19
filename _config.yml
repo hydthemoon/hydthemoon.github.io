@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Jaehyun Kim"
   avatar           : "/assets/logo.jpg"
-  bio              : "."
+  bio              : "hi"
   location         : "Seoul, South Korea"
   email            :
   links:
@@ -116,7 +116,7 @@ author:
     - label: "naver blog"
       icon: "fas fa-fw fa-link"
       url: "https://blog.naver.com/brian0409"
-    - label: "LinkedIn"
+    - label: "linkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kim-jaehyun-511177132/"
     - label: "GitHub"
