@@ -1,0 +1,36 @@
+I"Î<h2 id="profile">Profile</h2>
+<center><img src="/assets/img/me.jpg" width="30%" height="30%" style="
+border: 1px solid #cab6de;
+border-radius: 50%;
+padding: 5px;
+-moz-border-radius: 50%;
+-khtml-border-radius: 50%;
+-webkit-border-radius: 50%;
+" /></center>
+
+<ul>
+  <li>NAME : JiWon, Hyeon</li>
+  <li>MAJOR : Computer Science Engineering</li>
+</ul>
+
+<h2 id="career--activities">Career &amp; Activities</h2>
+<ul>
+  <li>Undergraduate resercher at Embedded System LAB (2018.06 ~ 2020.12)</li>
+  <li>LikeLion 7th @SCH (2019.03 ~ 2019.12)</li>
+</ul>
+
+<h2 id="current-interest">Current Interest</h2>
+<ul>
+  <li>Bigdata</li>
+  <li>Android Applicaiton</li>
+  <li>Web Development</li>
+  <li>Internet of Things</li>
+</ul>
+
+<h2 id="contact">Contact</h2>
+<ul>
+  <li>Email : zlone1208@gmail.com</li>
+  <li>Git : <a href="https://github.com/Hyeonjiwon">https://github.com/Hyeonjiwon</a></li>
+  <li>Blog : <a href="https://hyeonjiwon.github.io/">https://hyeonjiwon.github.io/</a></li>
+</ul>
+:ET
