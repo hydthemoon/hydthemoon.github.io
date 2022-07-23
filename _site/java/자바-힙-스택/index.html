@@ -288,7 +288,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          5 minute read
         
       </span>
     
@@ -407,7 +407,7 @@
 
 <p>여기서 unreachable object란 접근할 수 없는 object, 즉, 위의 사례1에서는 param이 <code class="language-plaintext highlighter-rouge">+</code>가 되기 전에 heap에 있던 <code class="language-plaintext highlighter-rouge">"jaehyun"</code> object가 <code class="language-plaintext highlighter-rouge">+</code>이후로는 더 이상 param에 의해 refer되지 않으므로 어떤 stack 변수로도 해당 object에 접근할 수 없는, unreachable object가 되는 것이다. 그리고 곧, 함수가 종료되면 param도 unreachable object가 되어 얘도 garbage가 된다. 이런애들이 GC에 의해 회수된다고 볼 수 있다.</p>
 
-<p>이 과정은 Mark and Sweep으로 진행된다. 꽤나 단순한 방법인데 아래와 같은 순서로 진행된다.</p>
+<p>이 과정은 <strong>Mark and Sweep</strong>으로 진행된다. 꽤나 단순한 방법인데 아래와 같은 순서로 진행된다.</p>
 
 <ol>
   <li>Root하나를 잡는다. stack에 있는 변수들, 실행중인 스레드, JNI 레퍼 등등 root가 될만한 것들.</li>
@@ -577,7 +577,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -616,7 +616,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          8 minute read
+          16 minute read
         
       </span>
     
@@ -661,7 +661,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
