@@ -28,7 +28,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # logo                     : "/assets/images/logo.jpg"
 masthead_title           : "달숨기자 블로그"
 # breadcrumbs            : true # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 100
 comments:
   provider               : disqus
   disqus:

@@ -34,4 +34,16 @@ var store = [{
         "tags": ["JAVA","cs"],
         "url": "/java/%EC%9E%90%EB%B0%94%EA%B3%B5%EB%B6%80/",
         "teaser": null
+      },{
+        "title": "인간실격",
+        "excerpt":"후기   tbw   ","categories": ["book"],
+        "tags": ["social"],
+        "url": "/book/%EC%9D%B8%EA%B0%84-%EA%B4%80%EA%B3%84%EC%9D%98-%EB%B2%95%EC%B9%99/",
+        "teaser": null
+      },{
+        "title": "[JAVA] 메모리 관리 - Garbage Collection",
+        "excerpt":"Unreachable Object들은 Garbage Collector에 의해 회수된다. 위의 내용을 이해하기 위해 JAVA에서의 메모리 관리 방법에 대해 살펴보자. 아래 reference들의 흐름을 따라 살을 붙이는 방식으로 작성했다. 일단 간략하게 stack과 heap의 특성을 요약해보자. Stack Heap에 할당된 object들의 reference가 할당된다. value type(primitive type)들이 직접 저장된다. stack의 변수들은 특정한 visibility(scope)가 있다. Thread마다 독립 stack 공간을...","categories": ["JAVA"],
+        "tags": ["Garbage Colletion","cs"],
+        "url": "/java/%EC%9E%90%EB%B0%94-%ED%9E%99-%EC%8A%A4%ED%83%9D/",
+        "teaser": null
       }]
