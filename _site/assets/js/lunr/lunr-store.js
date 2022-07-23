@@ -35,8 +35,8 @@ var store = [{
         "url": "/java/%EC%9E%90%EB%B0%94%EA%B3%B5%EB%B6%80/",
         "teaser": null
       },{
-        "title": "인간실격",
-        "excerpt":"후기   tbw   ","categories": ["book"],
+        "title": "인간관계의 법칙",
+        "excerpt":"후기   .   추천하는 독자   추천하지 않는 독자   all  ","categories": ["book"],
         "tags": ["social"],
         "url": "/book/%EC%9D%B8%EA%B0%84-%EA%B4%80%EA%B3%84%EC%9D%98-%EB%B2%95%EC%B9%99/",
         "teaser": null
