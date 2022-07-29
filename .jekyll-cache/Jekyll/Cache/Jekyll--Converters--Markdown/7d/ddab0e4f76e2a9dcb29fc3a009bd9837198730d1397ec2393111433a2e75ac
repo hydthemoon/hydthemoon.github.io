@@ -1,0 +1,47 @@
+I"n	<h2 id="fourier-series--transfrom-review">Fourier Series &amp; Transfrom Review</h2>
+
+<p>보통 이공계 학부생이라면 2학년 즈음에 신호및시스템 수업 혹은 복소함수론 수업에서 푸리에 급수와 변환에 대해 배웠을 것이다. 주인장의 경우 2학년 2학기 때 두 과목을 같이 들었는데, 수학과에서 열린 복소함수론 수업 초반에 Fourier Analysis하면서 좀 보고, 신호 수업에서 계산을 미친듯이 많이 했던 기억이 난다. 어쨋든, Fourier Transform을 간략하게 정리해보자.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><center>Time Property</center></th>
+      <th style="text-align: center"><center>Periodic</center></th>
+      <th style="text-align: right"><center>Nonperiodic</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Continuous</strong></td>
+      <td style="text-align: center"><center>Fourier Series</center></td>
+      <td style="text-align: right"><center>Fourier Transform</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Discrete</strong></td>
+      <td style="text-align: center"><center>Discrete-Time Fourier Series</center></td>
+      <td style="text-align: right"><center> 인스턴스가 소멸할때/GC가 수거할 때 </center></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fourier-series">Fourier Series</h3>
+
+\[x(t) = \sum_{k=-\infty}^{\infty} X[k] e^{jkw_o t}\]
+
+<h3 id="discrete-time-fourier-series">Discrete-Time Fourier Series</h3>
+
+\[x[n] = \sum_{k=&lt;N&gt;}^{} X[k] e^{jk\Omega_o n}\]
+
+<h3 id="fourier-transform">Fourier Transform</h3>
+
+\[x(t) = \frac{2\pi}{1}\int_{-\infty}^{\infty} X(jw)e^{jwt} \,dw\]
+
+<h3 id="discrete-time-fourier-transform">Discrete-Time Fourier Transform</h3>
+
+\[x[n] = \frac{2\pi}{1}\int_{2\pi}^{} X(e^{j\Omega})e^{j\Omega n} \,d\Omega\]
+
+<p>나와 같은 테크를 탄 공대생이라면 기존에 배운 푸리에 어쩌고의 개념은 위 공식과 함께 time domain에 있는 신호를 freq domain으로 convert해주는 것이라고 알고 있을 것이다. 그 배경에는 laplace 변환에서 시작해서 LTI system 등등 여러 개념들이 등장하지만 일단 이 포스트에서는 그부분까지 다루지는 않겠다.</p>
+
+<p>그런데, 사실 큰 수의 곱셈을 할 때도 쓰인다는 것을 알고 있을까? 일단 나는 몰랐다!</p>
+
+:ET
