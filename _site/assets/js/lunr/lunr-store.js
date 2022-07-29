@@ -49,7 +49,7 @@ var store = [{
       },{
         "title": "알고리즘에서의 고속 푸리에 변환",
         "excerpt":"Fourier Series &amp; Transfrom Review 보통 이공계 학부생이라면 2학년 즈음에 신호및시스템 수업 혹은 복소함수론 수업에서 푸리에 급수와 변환에 대해 배웠을 것이다. 주인장의 경우 2학년 2학기 때 두 과목을 같이 들었는데, 수학과에서 열린 복소함수론 수업 초반에 Fourier Analysis하면서 좀 보고, 신호 수업에서 계산을 미친듯이 많이 했던 기억이 난다. 어쨋든, Fourier Transform을...","categories": ["algo"],
-        "tags": ["FFT","신호및시스템","복소함수론","백준"],
+        "tags": ["FFT","신호및시스템","복소함수론","백준","추가예정"],
         "url": "/algo/Algo-FFT/",
         "teaser": null
       }]

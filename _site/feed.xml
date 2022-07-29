@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-29T16:32:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">달숨기자 블로그</title><subtitle>hi there</subtitle><author><name>Jaehyun Kim</name></author><entry><title type="html">알고리즘에서의 고속 푸리에 변환</title><link href="http://localhost:4000/algo/Algo-FFT/" rel="alternate" type="text/html" title="알고리즘에서의 고속 푸리에 변환" /><published>2022-07-29T00:00:00+09:00</published><updated>2022-07-29T00:00:00+09:00</updated><id>http://localhost:4000/algo/%5BAlgo%5D-FFT</id><content type="html" xml:base="http://localhost:4000/algo/Algo-FFT/"><![CDATA[<h2 id="fourier-series--transfrom-review">Fourier Series &amp; Transfrom Review</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-29T16:45:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">달숨기자 블로그</title><subtitle>hi there</subtitle><author><name>Jaehyun Kim</name></author><entry><title type="html">알고리즘에서의 고속 푸리에 변환</title><link href="http://localhost:4000/algo/Algo-FFT/" rel="alternate" type="text/html" title="알고리즘에서의 고속 푸리에 변환" /><published>2022-07-29T00:00:00+09:00</published><updated>2022-07-29T00:00:00+09:00</updated><id>http://localhost:4000/algo/%5BAlgo%5D-FFT</id><content type="html" xml:base="http://localhost:4000/algo/Algo-FFT/"><![CDATA[<h2 id="fourier-series--transfrom-review">Fourier Series &amp; Transfrom Review</h2>
 
 <p>보통 이공계 학부생이라면 2학년 즈음에 신호및시스템 수업 혹은 복소함수론 수업에서 푸리에 급수와 변환에 대해 배웠을 것이다. 주인장의 경우 2학년 2학기 때 두 과목을 같이 들었는데, 수학과에서 열린 복소함수론 수업 초반에 Fourier Analysis하면서 좀 보고, 신호 수업에서 계산을 미친듯이 많이 했던 기억이 난다. 어쨋든, Fourier Transform을 간략하게 정리해보자.</p>
 
@@ -45,6 +45,8 @@
 <p>그런데, 사실 큰 수의 곱셈을 할 때도 쓰인다는 것을 알고 있을까? 일단 나는 몰랐다! 이제부터 이쪽에 초점을 맞춰서 살펴보자.</p>
 
 <h2 id="다항식-곱셈에서의-적용">다항식 곱셈에서의 적용</h2>
+
+<h3 id="접근-아이디어">접근 아이디어</h3>
 
 <p>아래 두 polynomial을 곱하는데에는 Time Complexity가 어떻게 될까?</p>
 
@@ -151,6 +153,14 @@
 
 <h4 id="ifft">IFFT</h4>
 
+<p>이제, 결과를 가지고 polynomial의 계수를 구해주면 끝난다.</p>
+
+<p>간단히 말하면 역을 취해주면 되는 것인데, 계수에서 point를 얻을 때 사용한 방법에 역행렬을 취해서 point에서 계수를 얻는 방법을 얻어낸다고 볼 수 있다.</p>
+
+<p>놀랍게도(사실 행렬을 보면 꽤나 그럴만함) FFT와 비슷한 형태를 가지고 있는데, FFT 코드를 조금만 손봐주면 된다.</p>
+
+<p>자세한 증명과정은 [추가예정]</p>
+
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">IFFT</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">N</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -178,11 +188,11 @@ b = [5, 8, 7, 6, 0, 0, 0, 0]
 </code></pre></div></div>
 <p>그리고 <code class="language-plaintext highlighter-rouge">a</code>와 <code class="language-plaintext highlighter-rouge">b</code>를 계수로 하는 polynomial 곱셈을 수행하면 결과값이 어떻게 될까?</p>
 
-<p>상수항은 ${a[0]<em>b[0]}$, 일차항은 ${a[1]</em>b[0] + a[0]<em>b[1]}$, 이차항은 ${a[2]</em>b[0] + a[1]*b[1] + a[0] + b[1]}$ …</p>
+<p>상수항은 a[0] * b[0], 일차항은 a[1] * b[0] + a[0] * b[1], 이차항은 a[2] * b[0] + a[1] * b[1] + a[0] * b[2] …</p>
 
 <p>우리가 필요한 구간은 4개 곱의 합 구간이다. 두 <code class="language-plaintext highlighter-rouge">a</code>, <code class="language-plaintext highlighter-rouge">b</code>를 직접 곱해보면, 3차항은 <code class="language-plaintext highlighter-rouge">1*6+2*7+3*8+4*5</code>, 4차항은 <code class="language-plaintext highlighter-rouge">2*6+3*7+4*8+1*5</code>, 5차항은 .. 로 우리가 구하려했던 곱의 합들임을 확인할 수 있다.</p>
 
-<p>즉, 결과의 n차항 ~ 2n-1차항을 구해주면 된다.</p>
+<p>즉, 결과의 n ~ 2n차항 중에 최댓값을 구해주면 된다.</p>
 
 <h2 id="예제-2--보석-가게">예제 2 : 보석 가게</h2>
 
@@ -224,7 +234,7 @@ b = [5, 8, 7, 6, 0, 0, 0, 0]
 <span class="n">paper</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">(</span><span class="s">'R'</span><span class="p">,</span> <span class="s">'P'</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>오늘은 여기까지 !</p>]]></content><author><name>Jaehyun Kim</name></author><category term="algo" /><category term="FFT" /><category term="신호및시스템" /><category term="복소함수론" /><category term="백준" /><summary type="html"><![CDATA[Fourier Series &amp; Transfrom Review]]></summary></entry><entry><title type="html">[JAVA] 메모리 관리 - Garbage Collection</title><link href="http://localhost:4000/java/Java-heap-stack/" rel="alternate" type="text/html" title="[JAVA] 메모리 관리 - Garbage Collection" /><published>2022-07-22T00:00:00+09:00</published><updated>2022-07-22T00:00:00+09:00</updated><id>http://localhost:4000/java/%5BJava%5D-heap-stack</id><content type="html" xml:base="http://localhost:4000/java/Java-heap-stack/"><![CDATA[<blockquote>
+<p>오늘은 여기까지 !</p>]]></content><author><name>Jaehyun Kim</name></author><category term="algo" /><category term="FFT" /><category term="신호및시스템" /><category term="복소함수론" /><category term="백준" /><category term="추가예정" /><summary type="html"><![CDATA[Fourier Series &amp; Transfrom Review]]></summary></entry><entry><title type="html">[JAVA] 메모리 관리 - Garbage Collection</title><link href="http://localhost:4000/java/Java-heap-stack/" rel="alternate" type="text/html" title="[JAVA] 메모리 관리 - Garbage Collection" /><published>2022-07-22T00:00:00+09:00</published><updated>2022-07-22T00:00:00+09:00</updated><id>http://localhost:4000/java/%5BJava%5D-heap-stack</id><content type="html" xml:base="http://localhost:4000/java/Java-heap-stack/"><![CDATA[<blockquote>
   <p>Unreachable Object들은 Garbage Collector에 의해 회수된다.</p>
 </blockquote>
 
