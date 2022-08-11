@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-29T16:45:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">달숨기자 블로그</title><subtitle>hi there</subtitle><author><name>Jaehyun Kim</name></author><entry><title type="html">알고리즘에서의 고속 푸리에 변환</title><link href="http://localhost:4000/algo/Algo-FFT/" rel="alternate" type="text/html" title="알고리즘에서의 고속 푸리에 변환" /><published>2022-07-29T00:00:00+09:00</published><updated>2022-07-29T00:00:00+09:00</updated><id>http://localhost:4000/algo/%5BAlgo%5D-FFT</id><content type="html" xml:base="http://localhost:4000/algo/Algo-FFT/"><![CDATA[<h2 id="fourier-series--transfrom-review">Fourier Series &amp; Transfrom Review</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-11T21:51:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">달숨기자 블로그</title><subtitle>hi there</subtitle><author><name>Jaehyun Kim</name></author><entry><title type="html">[JAVA] 접근 제한자</title><link href="http://localhost:4000/java/Java-access-modifier/" rel="alternate" type="text/html" title="[JAVA] 접근 제한자" /><published>2022-08-11T00:00:00+09:00</published><updated>2022-08-11T00:00:00+09:00</updated><id>http://localhost:4000/java/%5BJava%5D-access-modifier</id><content type="html" xml:base="http://localhost:4000/java/Java-access-modifier/"><![CDATA[<p>저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.</p>
+
+<h2 id="포함-관계">포함 관계</h2>
+
+<p>선언된 대상을 접근할 수 있는 클래스를 기준으로 포함관계를 나타내면 아래와 같습니다.</p>
+
+<p><img width="400" alt="classmodi" src="https://user-images.githubusercontent.com/40457043/184095515-901d6f08-b94b-4cfe-8f4d-082f14834203.png" /></p>
+
+<p>(default란 아무것도 안적은 상황을 의미한다.)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><center>modifier</center></th>
+      <th style="text-align: center"><center>접근 가능성</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>public</strong></td>
+      <td style="text-align: center"><center>모든 패키지에서 가능</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>protected</strong></td>
+      <td style="text-align: center"><center>같은 패키지 + 선언된 클래스의 child 클래스</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>default</strong></td>
+      <td style="text-align: center"><center>같은 패키지의 클래스들</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>private</strong></td>
+      <td style="text-align: center"><center>내부만 가능</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위의 규칙들은 클래스 뿐만 아니라 변수나 메서드 등에도 같이 적용된다.</p>
+
+<p>접근제어자의 적절한 활용을 통해 실수를 방지하고 위험회피가 가능해진다.</p>
+
+<h2 id="예시">예시</h2>
+
+<p>…</p>
+
+<h2 id="참고">참고</h2>
+
+<p><a href="https://www.javatpoint.com/access-modifiers">javatpoint</a></p>
+
+<h2 id="여담">여담</h2>
+
+<p>아직 package 관리나 maven이나 graddle이냐 이런것들은 잘 모르겠는데 배울게 많다 ,,</p>]]></content><author><name>Jaehyun Kim</name></author><category term="JAVA" /><category term="접근 제한자" /><summary type="html"><![CDATA[저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.]]></summary></entry><entry><title type="html">알고리즘에서의 고속 푸리에 변환</title><link href="http://localhost:4000/algo/Algo-FFT/" rel="alternate" type="text/html" title="알고리즘에서의 고속 푸리에 변환" /><published>2022-07-29T00:00:00+09:00</published><updated>2022-07-29T00:00:00+09:00</updated><id>http://localhost:4000/algo/%5BAlgo%5D-FFT</id><content type="html" xml:base="http://localhost:4000/algo/Algo-FFT/"><![CDATA[<h2 id="fourier-series--transfrom-review">Fourier Series &amp; Transfrom Review</h2>
 
 <p>보통 이공계 학부생이라면 2학년 즈음에 신호및시스템 수업 혹은 복소함수론 수업에서 푸리에 급수와 변환에 대해 배웠을 것이다. 주인장의 경우 2학년 2학기 때 두 과목을 같이 들었는데, 수학과에서 열린 복소함수론 수업 초반에 Fourier Analysis하면서 좀 보고, 신호 수업에서 계산을 미친듯이 많이 했던 기억이 난다. 어쨋든, Fourier Transform을 간략하게 정리해보자.</p>
 

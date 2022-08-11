@@ -1,0 +1,53 @@
+I"><p>저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.</p>
+
+<h2 id="포함-관계">포함 관계</h2>
+
+<p>선언된 대상을 접근할 수 있는 클래스를 기준으로 포함관계를 나타내면 아래와 같습니다.</p>
+
+<p><img width="400" alt="classmodi" src="https://user-images.githubusercontent.com/40457043/184095515-901d6f08-b94b-4cfe-8f4d-082f14834203.png" /></p>
+
+<p>(default란 아무것도 안적은 상황을 의미한다.)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><center>modifier</center></th>
+      <th style="text-align: center"><center>접근 가능성</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>public</strong></td>
+      <td style="text-align: center"><center>모든 패키지에서 가능</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>protected</strong></td>
+      <td style="text-align: center"><center>같은 패키지 + 선언된 클래스의 child 클래스</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>default</strong></td>
+      <td style="text-align: center"><center>같은 패키지의 클래스들</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>private</strong></td>
+      <td style="text-align: center"><center>내부만 가능</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위의 규칙들은 클래스 뿐만 아니라 변수나 메서드 등에도 같이 적용된다.</p>
+
+<p>접근제어자의 적절한 활용을 통해 실수를 방지하고 위험회피가 가능해진다.</p>
+
+<h2 id="예시">예시</h2>
+
+<p>…</p>
+
+<h2 id="참고">참고</h2>
+
+<p><a href="https://www.javatpoint.com/access-modifiers">javatpoint</a></p>
+
+<h2 id="여담">여담</h2>
+
+<p>아직 package 관리나 maven이나 graddle이냐 이런것들은 잘 모르겠는데 배울게 많다 ,,</p>
+:ET

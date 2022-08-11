@@ -52,4 +52,10 @@ var store = [{
         "tags": ["FFT","신호및시스템","복소함수론","백준","추가예정"],
         "url": "/algo/Algo-FFT/",
         "teaser": null
+      },{
+        "title": "[JAVA] 접근 제한자",
+        "excerpt":"저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다. 포함 관계 선언된 대상을 접근할 수 있는 클래스를 기준으로 포함관계를 나타내면 아래와 같습니다. (default란 아무것도 안적은 상황을 의미한다.) modifier 접근 가능성 public 모든 패키지에서...","categories": ["JAVA"],
+        "tags": ["접근 제한자"],
+        "url": "/java/Java-access-modifier/",
+        "teaser": null
       }]

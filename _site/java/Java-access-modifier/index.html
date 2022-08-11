@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>달숨기자 블로그</title>
-<meta name="description" content="hi there">
+<!-- begin _includes/seo.html --><title>[JAVA] 접근 제한자 - 달숨기자 블로그</title>
+<meta name="description" content="저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.">
 
 
   <meta name="author" content="Jaehyun Kim">
   
+  <meta property="article:author" content="Jaehyun Kim">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="달숨기자 블로그">
-<meta property="og:title" content="달숨기자 블로그">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="[JAVA] 접근 제한자">
+<meta property="og:url" content="http://localhost:4000/java/Java-access-modifier/">
 
 
-  <meta property="og:description" content="hi there">
-
-
-
+  <meta property="og:description" content="저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2022-08-11T00:00:00+09:00">
 
 
 
@@ -41,11 +45,9 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/java/Java-access-modifier/">
 
 
-
-  <link rel="next" href="http://localhost:4000/page2/">
 
 
 <script type="application/ld+json">
@@ -94,7 +96,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -137,6 +139,8 @@
 
     <div class="initial-content">
       
+
+
 
 
 
@@ -259,33 +263,20 @@
 
 
 
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
-
-<h3 class="archive__subtitle">Recent posts</h3>
-
-
-
-
-<div class="entries-list">
-  
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[JAVA] 접근 제한자">
+    <meta itemprop="description" content="저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.">
+    <meta itemprop="datePublished" content="2022-08-11T00:00:00+09:00">
     
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/java/Java-access-modifier/" rel="permalink">[JAVA] 접근 제한자
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/java/Java-access-modifier/" class="u-url" itemprop="url">[JAVA] 접근 제한자
 </a>
-      
-    </h2>
-    
+          </h1>
+          
 
   <p class="page__meta">
     
@@ -306,17 +297,156 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.
-</p>
-  </article>
-</div>
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#포함-관계">포함 관계</a></li><li><a href="#예시">예시</a></li><li><a href="#참고">참고</a></li><li><a href="#여담">여담</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>저는 처음 자바 코드를 봤을때(사실 바로 지난주), 길다란 클래스 수식어들 때문인지 머리가 어지러워지고 말았습니다. 이번에는 그 주범인 접근제한자 - class modifier에 대해 잊지 않게 간략히 정리해두었다.</p>
+
+<h2 id="포함-관계">포함 관계</h2>
+
+<p>선언된 대상을 접근할 수 있는 클래스를 기준으로 포함관계를 나타내면 아래와 같습니다.</p>
+
+<p><img width="400" alt="classmodi" src="https://user-images.githubusercontent.com/40457043/184095515-901d6f08-b94b-4cfe-8f4d-082f14834203.png" /></p>
+
+<p>(default란 아무것도 안적은 상황을 의미한다.)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><center>modifier</center></th>
+      <th style="text-align: center"><center>접근 가능성</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>public</strong></td>
+      <td style="text-align: center"><center>모든 패키지에서 가능</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>protected</strong></td>
+      <td style="text-align: center"><center>같은 패키지 + 선언된 클래스의 child 클래스</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>default</strong></td>
+      <td style="text-align: center"><center>같은 패키지의 클래스들</center></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>private</strong></td>
+      <td style="text-align: center"><center>내부만 가능</center></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위의 규칙들은 클래스 뿐만 아니라 변수나 메서드 등에도 같이 적용된다.</p>
+
+<p>접근제어자의 적절한 활용을 통해 실수를 방지하고 위험회피가 가능해진다.</p>
+
+<h2 id="예시">예시</h2>
+
+<p>…</p>
+
+<h2 id="참고">참고</h2>
+
+<p><a href="https://www.javatpoint.com/access-modifiers">javatpoint</a></p>
+
+<h2 id="여담">여담</h2>
+
+<p>아직 package 관리나 maven이나 graddle이냐 이런것들은 잘 모르겠는데 배울게 많다 ,,</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
 
   
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
+      <a href="/tags/#%EC%A0%91%EA%B7%BC-%EC%A0%9C%ED%95%9C%EC%9E%90" class="page__taxonomy-item p-category" rel="tag">접근 제한자</a>
+    
+    </span>
+  </p>
 
 
 
-<div class="list__item">
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#java" class="page__taxonomy-item p-category" rel="tag">JAVA</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-08-11T00:00:00+09:00">August 11, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BJAVA%5D+%EC%A0%91%EA%B7%BC+%EC%A0%9C%ED%95%9C%EC%9E%90%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2FJava-access-modifier%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2FJava-access-modifier%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjava%2FJava-access-modifier%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/algo/Algo-FFT/" class="pagination--pager" title="알고리즘에서의 고속 푸리에 변환
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -351,12 +481,12 @@
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -393,12 +523,12 @@
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -433,12 +563,12 @@
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -472,50 +602,13 @@
   </article>
 </div>
 
+        
+      </div>
+    </div>
+  
   
 </div>
 
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled current">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-
-    
-    
-
-    
-      <li><a href="/page2/">2</a></li>
-    
-
-    
-    
-      <li><a href="/page2/">Next</a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
-</div>
     </div>
 
     
@@ -561,6 +654,25 @@
 
 
 
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/java/Java-access-modifier/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/java/[Java]-access-modifier"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://hydthemoon-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
 
 
 
